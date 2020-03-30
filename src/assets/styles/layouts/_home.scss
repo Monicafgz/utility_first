@@ -1,21 +1,299 @@
-body {
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins, functions...............Globally used mixins and function.
+ *
+ * GENERIC
+ * Normalize........Reset margin and padding styles.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings, a, etc..............Define general styles.
+ * 
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Specific UI components
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Main.................The main content elements.
+ *
+ */
+
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+
+@import 'config';
+
+/*------------------------------------*\
+  #TOOLS
+\*------------------------------------*/
+
+@import 'tools';
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 30px;
-  font-family: $font-family-sans-serif;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  padding: 0;
 }
 
-.uoc-logo {
+html {
+  font-size: 100%;
+}
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+
+body {
+  font-family: $font-stack;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  @include set-background($light-color);
+}
+
+@media (min-width: 48em) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 1.5rem;
+  font-family: $font-title;
+  font-weight: 600;
+  line-height: 1;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+  border-top: 0.125rem solid;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  margin-right: 0.4rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $secondary-color;
+}
+
+abbr {
+  font-variant: none;
+}
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+.container {
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+@media (min-width: 48em) {
+  .container {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+.flexContainer {
   display: block;
-  margin-bottom: 20px;
-  max-width: 300px;
-  height: auto;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 36px;
+@media (min-width: 48em) {
+  .flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.flexContainer--reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 48em) {
+  .flexContainer--reverse {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 48em) {
+  .flexContainer__col--40 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 48em) {
+  .flexContainer__col--60 {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 48em) {
+  .flexContainer__col--50 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+.showcase {
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @include set-background($header-primary-color);
+}
+
+.showcase__title {
+  font-size: 3rem;
   font-weight: 700;
-  color: $uoc-corporate;
+  line-height: 0.9;
+  color: inherit;
+}
+
+@media (min-width: 48em) {
+  .showcase__title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .showcase__title {
+    font-size: 5rem;
+  }
+}
+
+.showcase__subtitle {
+  min-width: 10rem;
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 48em) {
+  .showcase__subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.showcase__links {
+  font-size: 1.5rem;
+}
+
+.showcase__image {
+  min-width: 10rem;
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+}
+
+@media (min-width: 48em) {
+  .showcase__image {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 60em) {
+  .showcase__image {
+    max-width: 70%;
+  }
+}
+
+.highligh {
+  color: $secondary-color;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section__list {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  & li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.section__list--fas {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  & li {
+    margin-bottom: 0.5rem;
+    & i.fas {
+      margin-right: 0.5rem;
+      color: $secondary-color;
+    }
+  }
+}
+
+.section__block {
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.section__main-paragraf {
+  text-transform: capitalize;
+  & span {
+    color: $secondary-color;
+    text-decoration: underline;
+  }
+}
+
+footer.footer {
+  height: 15rem;
+  padding-top: 1rem;
+  @include set-background($header-primary-color);
 }
