@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+
+@use 'sass:color';
+
+$font-family-sans-serif: 'Roboto', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family-serif: 'Georgia', 'Times New Roman', serif;
+$font-stack: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
+$font-title: 'Roboto', sans-serif;
+
+$brown: #796b5e;
+$blue: #00a7ad;
+$gray-dark: rgb(41, 43, 44);
+$gray-light: rgb(247, 247, 249);
+$white: #fff !default;
+$white-shadow: rgba(255, 255, 255, 0.3);
+$blue-shadow: rgb(0, 167, 173, 0.3);
+$black: #000 !default;
+
+$bg-primary: $brown;
+$bg-secondary: $blue;
+$bg-shadow: $white-shadow;
+$links: $gray-dark;
+$links-hover: $blue;
+$text: $gray-dark;
