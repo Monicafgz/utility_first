@@ -25,3 +25,19 @@ $bg-shadow: $white-shadow;
 $links: $gray-dark;
 $links-hover: $blue;
 $text: $gray-dark;
+
+// Bootstrap variable overrides
+$enable-responsive-font-sizes: true;
+
+$font-size-base: 1rem !default;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$display1-size: 5.5rem;
+$display2-size: 4.5rem;
+$display3-size: 3.5rem;
+$display4-size: 2.5rem;

@@ -27,6 +27,7 @@
  * Main.................The main content elements.
  * ETC...
  *
+
  */
 
 /*------------------------------------*\
@@ -678,9 +679,10 @@ a:hover {
 
 .sp-hero {
   min-height: 500px;
+  width: 100%;
+  background-image: url('../images/chinese_house.jpg');
   background-position: center;
   background-size: cover;
-  width: 100%;
   background-repeat: no-repeat;
 }
 
@@ -689,7 +691,6 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../images/chinese_house.jpg');
 }
 
 .sp-hero__title {
@@ -724,7 +725,14 @@ a:hover {
 }
 
 /* Carousel of bootstrap personalized */
+
 .carousel-inner {
+  max-height: 280px !important;
   width: 100%;
-  max-height: 600px !important;
+}
+
+@include media-breakpoint-up(sm) {
+  .carousel-inner {
+    max-height: 600px !important;
+  }
 }
