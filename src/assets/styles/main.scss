@@ -4,14 +4,12 @@
  * see commented examples below
  */
 
+// @import "@tailwind";
+@tailwind base;
+@tailwind components;
+
 // @import "@some-company/some-node-module";
 @import '@fortawesome/fontawesome-free/css/all.css';
-
-// @import bootstrap variable overrides;
-@import 'layouts/variables';
-
-// @import "some-node-module";
-@import '~bootstrap/scss/bootstrap.scss';
 
 /**
  * Import layouts
@@ -19,6 +17,9 @@
  */
 
 @import 'layouts/home';
+
+// @import "@tailwind";
+@tailwind utilities;
 
 /**
  * Do NOT include anything else in this file!
