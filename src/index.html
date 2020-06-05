@@ -14,56 +14,73 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <title>UOC Boilerplate - Tailwind</title>
+        <title>Utility-first Tailwind</title>
     </head>
-    <body class="bg-indigo-800">
+    <body class="min-h-screen bg-gray-100 font-body font-normal text-sm md:text-base">
+        <!-- Header
+================================================== -->
+
         <!-- NAVIGATION BAR -->
         <div class="w-full">
             <nav class="flex items-center justify-center sm:justify-between flex-wrap bg-white p-6">
                 <a
-                    class="flex items-center justify-center flex-shrink-0 text-gray-900 p-6"
+                    class="flex items-center justify-center flex-shrink-0 nav-link--icon text-6xl p-6"
                     href="index.html"
                 >
-                    <i class="text-5xl fab fa-tumblr-square"></i>
+                    <i class="fab fa-tumblr-square"></i>
                 </a>
 
-                <ul
-                    class="w-full block text-lg uppercase tracking-widest sm:flex sm:items-center sm:w-auto"
-                >
+                <ul class="w-full block sm:flex sm:items-center sm:w-auto">
                     <li class="sm:mr-8">
-                        <a class="block mt-4 text-center sm:inline-block" href="cast.html">Cast</a>
+                        <a class="block mt-4 nav-link sm:inline-block" href="cast.html">Cast</a>
                     </li>
                     <li class="sm:mr-8">
-                        <a class="block mt-4 text-center sm:inline-block" href="#">Blog</a>
+                        <a class="block mt-4 nav-link sm:inline-block" href="#">Blog</a>
                     </li>
                     <li class="sm:mr-8">
-                        <a class="block mt-4 text-center sm:inline-block" href="#">Media</a>
+                        <a class="block mt-4 nav-link sm:inline-block" href="#">Media</a>
                     </li>
                 </ul>
             </nav>
-            <!--/NAVIGATION BAR  -->
         </div>
-
-        <!-- Header
+        <!--/NAVIGATION BAR  -->
+        <!-- / Header
 ================================================== -->
 
         <!-- Main content
 ================================================== -->
         <main>
-            <div class="min-h-lx w-full bg-center bg-cover bg-no-repeat" style="background:url('http://www.birds.com/wp-content/uploads/home/bird4.jpg');">
+            <div class="min-h-lx w-full flex items-center bg-asia bg-center bg-cover bg-no-repeat">
                 <div class="container">
-                    <div class="min-h-lg flex flex-wrap justify-center align-center" >
-                        <div class="flex-1">
-                            <h1 class="sp-hero__title" style="font-family: sans-serif">Come to the premiere!</h1>
+                    <div class="min-h-lg flex flex-wrap justify-center align-center">
+                        <div class="md:w-1/2 flex items-center">
+                            <h1
+                                class="my-8 md:my-0 font-display font-semibold text-left text-white text-shadow-md"
+                            >
+                                Come to <br />the premiere!
+                            </h1>
                         </div>
-                        <!--.col-md.6-->
-                        <div class="flex-1">
-                            <div class="sp-hero__block-box">
-                                <form class="form__item">
-                                    <h3>Get your ticket</h3>
-                                    <input type="date" name="date" />
+                        <div class="md:w-1/2 flex items-center mb-8 md:mb-0">
+                            <div class="p-8 bg-indigo-100 rounded-lg">
+                                <form
+                                    class="flex flex-col bg-white rounded-lg border border-solid border-indigo-700"
+                                >
+                                    <h3
+                                        class="align-center extra-bold px-4 py-8 border-b border-solid border-indigo-700"
+                                    >
+                                        Get your ticket
+                                    </h3>
+                                    <input
+                                        class="align-center text-lg extra-bold px-4 py-6 border-b border-solid border-indigo-700"
+                                        type="date"
+                                        name="date"
+                                    />
 
-                                    <select name="" id="">
+                                    <select
+                                        name=""
+                                        id=""
+                                        class="align-center text-lg extra-bold px-4 py-6"
+                                    >
                                         <option value="1">1 Guest</option>
                                         <option value="2">2 Guest</option>
                                         <option value="3">3 Guest</option>
@@ -71,7 +88,11 @@
                                         <option value="5">5 Guest</option>
                                     </select>
 
-                                    <input type="submit" value="Search" />
+                                    <input
+                                        class="font-semibold text-white bg-indigo-700 text-lg align-center extra-bold px-4 py-6"
+                                        type="submit"
+                                        value="Search"
+                                    />
                                 </form>
                             </div>
                         </div>
@@ -83,7 +104,7 @@
                 <!-- Section  -->
 
                 <div class="text-center my-16">
-                    <h2 class="text-5xl font-bold" style="color:red">Interesting topics</h2>
+                    <h2 class="capitalize">Interesting topics</h2>
                 </div>
 
                 <!-- MEDIA CARD -->
@@ -99,10 +120,10 @@
                     </figure>
 
                     <div class="lg:flex-grow-0 text-gray-700 mt-4 lg:mt-0 lg:ml-12 lg:mr-12">
-                        <h3 class="flex-initial tracking-wide text-3xl text-indigo-700 font-bold">
+                        <h3 class="flex-initial tracking-wide text-indigo-700 font-bold">
                             Vokalia and Consonantia
                         </h3>
-                        <p class="mt-3 text-sm font-semibold leading-6">
+                        <p class="mt-3 leading-7 tracking-wide">
                             Far far away, behind the word mountains, far from the countries Vokalia
                             and Consonantia, there live the blind texts. Separated they live in
                             Bookmarksgrove right at the coast of the Semantics, a large language
@@ -119,10 +140,10 @@
                     class="bg-gray-400 px-5 py-5 mx-2 mb-16 rounded shadow-xl lg:flex lg:items-start"
                 >
                     <div class="lg:flex-grow-0 text-gray-700 mt-4 lg:mt-0 lg:ml-12 lg:mr-12">
-                        <h3 class="flex-initial tracking-wide text-3xl text-indigo-700 font-bold">
+                        <h3 class="flex-initial tracking-wide text-indigo-700 font-bold">
                             Vokalia and Consonantia
                         </h3>
-                        <p class="mt-3 text-sm font-semibold leading-6">
+                        <p class="mt-3 leading-7 tracking-wide">
                             Far far away, behind the word mountains, far from the countries Vokalia
                             and Consonantia, there live the blind texts. Separated they live in
                             Bookmarksgrove right at the coast of the Semantics, a large language
@@ -154,10 +175,10 @@
                     </figure>
 
                     <div class="lg:flex-grow-0 text-gray-700 mt-4 lg:mt-0 lg:ml-12 lg:mr-12">
-                        <h3 class="flex-initial tracking-wide text-3xl text-indigo-700 font-bold">
+                        <h3 class="flex-initial tracking-wide text-indigo-700 font-bold">
                             Vokalia and Consonantia
                         </h3>
-                        <p class="mt-3 text-sm font-semibold leading-6">
+                        <p class="mt-3 leading-7 tracking-wide">
                             Far far away, behind the word mountains, far from the countries Vokalia
                             and Consonantia, there live the blind texts. Separated they live in
                             Bookmarksgrove right at the coast of the Semantics, a large language
@@ -174,10 +195,10 @@
                     class="bg-gray-400 px-5 py-5 mx-2 mb-16 rounded shadow-xl lg:flex lg:items-start"
                 >
                     <div class="lg:flex-grow-0 text-gray-700 mt-4 lg:mt-0 lg:ml-12 lg:mr-12">
-                        <h3 class="flex-initial tracking-wide text-3xl text-indigo-700 font-bold">
+                        <h3 class="flex-initial tracking-wide text-indigo-700 font-bold">
                             Vokalia and Consonantia
                         </h3>
-                        <p class="mt-3 text-sm font-semibold leading-6">
+                        <p class="mt-3 leading-7 tracking-wide">
                             Far far away, behind the word mountains, far from the countries Vokalia
                             and Consonantia, there live the blind texts. Separated they live in
                             Bookmarksgrove right at the coast of the Semantics, a large language
@@ -205,47 +226,56 @@
 
         <!-- Footer
 ================================================== -->
-        <div class="container">
-            <!-- NAVIGATION BAR -->
-            <nav class="flex items-center justify-center sm:justify-between flex-wrap bg-white p-6">
-                <a
-                    class="flex items-center justify-center flex-shrink-0 text-gray-900 p-6"
-                    href="index.html"
-                >
-                    <i class="text-5xl fab fa-tumblr-square"></i>
-                </a>
+        <div class="w-full bg-white">
+            <div class="container">
+                <!-- NAVIGATION BAR -->
+                <nav class="flex items-center justify-center sm:justify-between flex-wrap p-6">
+                    <a
+                        class="flex items-center justify-center flex-shrink-0 nav-link--icon text-6xl p-6"
+                        href="index.html"
+                    >
+                        <i class="fab fa-tumblr-square"></i>
+                    </a>
 
-                <ul
-                    class="w-full block text-lg uppercase tracking-widest sm:flex sm:items-center sm:w-auto"
-                >
-                    <li class="sm:mr-8">
-                        <a class="block mt-4 text-center sm:inline-block" href="cast.html">Cast</a>
-                    </li>
-                    <li class="sm:mr-8">
-                        <a class="block mt-4 text-center sm:inline-block" href="#">Blog</a>
-                    </li>
-                    <li class="sm:mr-8">
-                        <a class="block mt-4 text-center sm:inline-block" href="#">Media</a>
-                    </li>
-                </ul>
-                <ul class="flex text-xl my-2">
-                    <li>
-                        <a class="mx-2" href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a class="mx-2" href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a class="mx-2" href="#"><i class="fa fa-github"></i></a>
-                    </li>
-                    <li>
-                        <a class="mx-2" href="#"><i class="fa fa-instagram"></i></a>
-                    </li>
-                </ul>
-            </nav>
-            <!--/NAVIGATION BAR  -->
-<!-- Footer -->
+                    <ul class="w-full block sm:flex sm:items-center sm:w-auto">
+                        <li class="sm:mr-8">
+                            <a class="block mt-4 nav-link sm:inline-block" href="cast.html">Cast</a>
+                        </li>
+                        <li class="sm:mr-8">
+                            <a class="block mt-4 nav-link sm:inline-block" href="#">Blog</a>
+                        </li>
+                        <li class="sm:mr-8">
+                            <a class="block mt-4 nav-link sm:inline-block" href="#">Media</a>
+                        </li>
+                    </ul>
+                    <ul class="flex my-2">
+                        <li>
+                            <a class="mx-2 text-2xl nav-link--icon" href="#"
+                                ><i class="fa fa-twitter"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a class="mx-2 text-2xl nav-link--icon" href="#"
+                                ><i class="fa fa-facebook"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a class="mx-2 text-2xl nav-link--icon" href="#"
+                                ><i class="fa fa-github"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a class="mx-2 text-2xl nav-link--icon" href="#"
+                                ><i class="fa fa-instagram"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--/NAVIGATION BAR  -->
+            </div>
+        </div>
 
+        <!-- / Footer
 ================================================== -->
 
         <script src="./assets/scripts/main.js"></script>

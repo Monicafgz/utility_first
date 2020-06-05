@@ -24,25 +24,18 @@ module.exports = {
       // => @media (min-width: 1220px) { ... }
     },
     letterSpacing: {
-      tightest: '-.075em',
-      tighter: '-.05em',
-      tight: '-.025em',
-      normal: '0',
-      wide: '.025em',
       wider: '.1em',
       widest: '.2em',
     },
     minHeight: {
-      '0': '0',
-      '1/4': '25%',
-      '1/2': '50%',
-      '3/4': '75%',
-      full: '100%',
-      lg: '420px',
-      lx: '500px',
+      lg: '470px',
+      lx: '550px',
+    },
+    fontFamily: {
+      display: ['Raleway'],
+      body: ['Roboto'],
     },
   },
-  variants: {},
   plugins: [],
   corePlugins: {
     backgroundAttachment: true,
